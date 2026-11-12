@@ -1,9 +1,9 @@
 # Copilot Instructions for LLMs-from-scratch-CN
 
 ## 项目结构与主要内容
-- 本项目以章节（如 `ch02/01_main-chapter-code/`）为单位组织，每章包含 Jupyter Notebook（如 `ch02-checkpoint.ipynb`）和相关数据文件（如 `the-verdict.txt`）。
+- 本项目以章节（如 `ch02/01_main-chapter-code/`）为单位组织，包含 Jupyter Notebook 和相关数据文件（如 `ch02/01_main-chapter-code/the-verdict.txt`）。
 - 主要代码与实验均在 Notebook 中实现，便于交互式开发和逐步调试。
-- 虚拟环境位于 `LLM_venv/`，依赖包安装在此目录下，勿在此目录下修改项目代码。
+- 仓库不包含 Python 虚拟环境；请在本地自行创建环境，避免将环境目录提交到仓库。
 
 ## 关键开发模式
 - **文本处理与分词**：
@@ -16,9 +16,9 @@
   - 主要文本数据存放于 `the-verdict.txt`，如不存在会自动下载。
 
 ## 依赖与环境
-- 推荐使用项目自带的虚拟环境 `LLM_venv/`，如需安装新包请在该环境下执行。
-- 主要依赖：`torch`、`tiktoken`、`re`、`urllib`、`os` 等。
-- Notebook 运行前请确保已激活虚拟环境。
+- 仓库目前没有提供 `requirements.txt`、`pyproject.toml` 或 Conda 环境文件，因此没有统一的依赖安装清单。
+- 请根据要运行的 Notebook 创建并激活自己的 Python 环境，再安装其中使用的第三方包；例如，部分 Notebook 使用 `torch`、`numpy`、`sympy`、`tiktoken` 或 `transformers`。
+- `re`、`urllib`、`os` 等是 Python 标准库，无需单独安装。
 
 ## 约定与风格
 - 分词、编码、解码等处理均以函数/类方式实现，便于复用。
@@ -44,4 +44,4 @@ class SimpleTokenizerV1:
 
 ## 其他说明
 - 如需扩展分词器、添加新实验，建议以新 cell 或新 Notebook 形式实现，避免影响主流程。
-- 参考文件：`ch02/01_main-chapter-code/ch02-checkpoint.ipynb`。
+- 参考文件：`ch02/01_main-chapter-code/ch02.ipynb`。
